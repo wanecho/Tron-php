@@ -1,0 +1,50 @@
+{
+    "name": "aiwozhe/tron-api",
+    "description": "A PHP API for interacting with Tron (Trx)",
+    "license": "MIT",
+    "type":   "library",
+    "homepage": "https://github.com/aiwozhe/tron-api",
+    "authors": [
+        {
+            "name": "Shamsudin Serderov",
+            "email": "steein.shamsudin@gmail.com"
+        }
+    ],
+    "keywords": [
+        "iexbase",
+        "tron-lib",
+        "tron-php",
+        "tron-api",
+        "tron-rest-api"
+    ],
+
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "kornrunner/secp256k1": "^0.1.2",
+        "aiwozhe/web3": "^1.0",
+        "simplito/elliptic-php": "^1.0"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IEXBase\\TronAPI\\": "src"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "IEXBase\\TronAPI\\Test\\": "tests"
+        }
+    },
+
+    "config": {
+        "sort-packages": true
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
