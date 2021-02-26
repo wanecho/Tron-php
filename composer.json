@@ -23,7 +23,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "kornrunner/secp256k1": "^0.1.2",
         "aiwozhe/web3": "^1.0",
-        "simplito/elliptic-php": "^1.0.7"
+        "simplito/elliptic-php": "~1.0.3"
     },
 
     "require-dev": {
