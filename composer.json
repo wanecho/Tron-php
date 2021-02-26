@@ -1,9 +1,9 @@
 {
-    "name": "aiwozhe/tron-api",
+    "name": "wanecho/tron-api",
     "description": "A PHP API for interacting with Tron (Trx)",
     "license": "MIT",
     "type":   "library",
-    "homepage": "https://github.com/aiwozhe/tron-api",
+    "homepage": "https://github.com/wanecho/tron-api",
     "authors": [
         {
             "name": "Shamsudin Serderov",
@@ -23,7 +23,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "kornrunner/secp256k1": "^0.1.2",
         "aiwozhe/web3": "^1.0",
-        "simplito/elliptic-php": "^1.0"
+        "simplito/elliptic-php": "^1.0.3"
     },
 
     "require-dev": {
