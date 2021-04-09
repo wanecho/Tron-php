@@ -132,4 +132,44 @@ trait TronAwareTrait
     {
         return ($prefix ? '0x' : ''). Keccak::hash($string, 256);
     }
+
+    public  function parseContractData($data,$wei='1e6')
+    {
+        $address = $this->hexToAddress(substr($data,10,62));
+        $value   = $this->hexToBigInteger(substr($data,74));
+        return [
+            'address' => $address,
+            'value' => $value/$wei
+        ];
+    }
+
+    /**
+     * 16进制转钱包地址
+     *
+     * @param $hex
+     * @return string|null
+     */
+    private  function hexToAddress($hex)
+    {
+        if (strlen($hex) > 42){
+            $hex = substr($hex,20);
+            if(substr($hex,0,2)=="00"){
+                $hex = substr_replace($hex,"41",0,2);
+            }
+            return $this->fromHex($hex);
+        }
+        return null;
+    }
+
+    /**
+     * 16进制转
+     *
+     * @param $hex
+     * @return BigInteger
+     */
+    public function hexToBigInteger($hex)
+    {
+        return hexdec('0x'.$hex);
+    }
+
 }
