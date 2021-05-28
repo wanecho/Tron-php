@@ -132,7 +132,10 @@ trait TronAwareTrait
     {
         return ($prefix ? '0x' : ''). Keccak::hash($string, 256);
     }
-
+    
+    /**
+     * 解析数据
+     */
     public  function parseContractData($data,$wei='1e6')
     {
         $address = $this->hexToAddress(substr($data,10,62));
